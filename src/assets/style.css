@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto';
+}
+svg {
+    cursor: pointer;
+}
+.sidebarDesligado {
+    grid-template-areas:
+    "header header"
+    "content content"
+    "footer footer" !important;
+}
+#app {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 350px auto;
+    grid-template-rows: 75px auto 50px;
+    grid-template-areas:
+    "sidebar header"
+    "sidebar content"
+    "footer footer";
+}
+
+.header {
+    grid-area: header;
+    -webkit-box-shadow: -2px -1px 15px 7px rgba(0,0,0,0.5);
+    -moz-box-shadow: -3px -2px 30px 14px rgba(0,0,0,0.425);
+    box-shadow: -4px -3px 45px 21px rgba(0,0,0,0.35);
+}
+.sidebar {
+    border-right: 1px solid rgb(184, 184, 184);
+    grid-area: sidebar;
+}
+.content {
+    grid-area: content;
+}
+.footer {
+    grid-area: footer;
+}
